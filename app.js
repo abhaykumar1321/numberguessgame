@@ -33,6 +33,12 @@ function checkGuess() {
 
                     if (userGuess < randomNumber) {
                         lowOrHi.textContent = "Last guess was too low!";
-                    } else if (userGuess > randomNumber)
+                    } else if (userGuess > randomNumber) {
+                        lowOrHi.textContent = "Last guess was too high!";
+                    }
                 }
+
+                guessCount++;
+                guessField.value = "";
+                guessField.focus();
 }
